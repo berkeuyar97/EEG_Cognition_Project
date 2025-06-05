@@ -58,7 +58,7 @@ fig = raw.plot(
     show=True, # Display the plot
     duration=10 # Show 10 seconds of data at a time
 )
-
+#fig.savefig('raw_eeg_data.png') 
 # --- Optional: Keep the plot open until closed manually ---
 # If you're running this from an IDE or script, the plot might close quickly.
 # This line ensures the plot stays open until you close it.
