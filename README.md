@@ -30,5 +30,25 @@ To set up and run this project, please follow these steps:
     python3 -m venv venv
     source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
     ```
+    3.  **Install the required libraries:**
+    Once your virtual environment is active, install all necessary Python libraries using pip:
+    ```bash
+    pip install numpy pandas matplotlib mne
+    ```
+    *Note: If you encounter issues, try `pip3` instead of `pip`.*
+
+4.  **Run the EEG analysis script:**
+    Execute the main script to perform the EEG data analysis and display visualizations:
+    ```bash
+    python eeg_analysis.py
+    ```
+    This script will load a sample EEG dataset, process it, and show the visualizations.
+
+5.  **Deactivate the virtual environment (when done):**
+    When you're finished working on the project, you can deactivate your virtual environment:
+    ```bash
+    deactivate
+    ```
+    
 ## Output Example
 ![Raw EEG Data Visualization](raw_eeg_data.png)
