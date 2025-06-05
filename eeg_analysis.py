@@ -2,12 +2,11 @@
 import mne
 import matplotlib.pyplot as plt
 import matplotlib
-matplotlib.use('TkAgg') # Bu satırı ekleyin
-# EKLE: Matplotlib'in arkaplanını (backend) belirgin şekilde ayarla
-# Bu, grafik penceresinin açılmasını sağlamaya yardımcı olabilir.
-mne.viz.set_browser_backend('matplotlib') # Bu satırı ekleyin
+matplotlib.use('TkAgg') 
 
-print("Script started. Loading sample EEG data...") # Güncelleme: Başlangıç mesajı
+mne.viz.set_browser_backend('matplotlib') 
+
+print("Script started. Loading sample EEG data...") 
 
 # --- Step 1: Load a sample EEG dataset ---
 # MNE-Python comes with some small sample datasets.
