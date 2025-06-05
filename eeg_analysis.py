@@ -1,6 +1,7 @@
 
 import mne
-import matplotlib.pyplot as plt
+import os
+import matplotlib.pyplot as plt # Matplotlib genellikle görselleştirme için gereklidir
 import matplotlib
 matplotlib.use('TkAgg') 
 
@@ -32,7 +33,7 @@ print(f"Duration: {raw.times[-1]:.2f} seconds")
 raw.pick_types(eeg=True, meg=False, eog=False, stim=False, exclude='bads')
 print(f"\nNumber of EEG channels selected: {len(raw.ch_names)}")
 
-print("\nPlotting raw EEG data...") 
+# Plotting raw EEG data (this part should be visible and not commented out)
 fig = raw.plot(
     n_channels=20, # Display first 20 EEG channels
     scalings='auto', # Automatically adjust amplitude scaling
@@ -40,14 +41,17 @@ fig = raw.plot(
     show=True, # Display the plot
     duration=10 # Show 10 seconds of data at a time
 )
-<<<<<<< HEAD
-#fig.savefig('raw_eeg_data.png') 
-# --- Optional: Keep the plot open until closed manually ---
-# If you're running this from an IDE or script, the plot might close quickly.
-# This line ensures the plot stays open until you close it.
-=======
+print("\nPlotting Power Spectral Density (PSD)...")
+# Plotting the power spectral density of EEG channels
+fig_psd = raw.plot_psd(fmin=1, fmax=40, average=True, spatial_colors=False, exclude='bads', verbose=False)
+fig_psd.suptitle('EEG Power Spectral Density (1-40 Hz)', y=1.05) # Add a title
 
->>>>>>> 0c58e68b53405cde1dd94eda723247a13818ee7c
+# Optional: Adjust PSD plot settings
+# fig_psd.tight_layout() # Uncomment if plots overlap
+
+# raw.plot() için plt.show() var, fig_psd için de gerekebilir
+# plt.show() # Eğer raw.plot() ile tek plt.show() yetmiyorsa, buraya da ekleyebilirsiniz.
+
 plt.show() # This line is often implicitly called by raw.plot(show=True) but can be explicit for other plots.
 
 print("Script finished. Close the plot window to exit.")
