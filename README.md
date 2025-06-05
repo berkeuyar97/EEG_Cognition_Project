@@ -8,6 +8,24 @@ This project aims to load, process, and visualize fundamental EEG (Electroenceph
 * To visualize the raw EEG signals.
 ## Technologies Used
 
+## ⚙️ Setup and Running the Project
+
+To set up and run this project, please follow these steps:
+
+1.  **Clone the repository:**
+    First, clone the project repository to your local machine:
+    ```bash
+    git clone [https://github.com/berkeuyar97/EEG_Cognition_Project.git](https://github.com/berkeuyar97/EEG_Cognition_Project.git)
+    cd EEG_Cognition_Project
+    ```
+
+2.  **Create a virtual environment (recommended):**
+    It's highly recommended to create a dedicated Python virtual environment for this project to manage dependencies:
+    ```bash
+    python3 -m venv venv
+    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+    ```
+
 * **Python 3.x:** The main programming language for the project.
 * **MNE-Python:** A leading open-source Python library for EEG/MEG data analysis.
 * **Matplotlib:** A Python library used for data visualization.
