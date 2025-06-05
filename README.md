@@ -13,8 +13,5 @@ This project aims to load, process, and visualize fundamental EEG (Electroenceph
 * **Matplotlib:** A Python library used for data visualization.
 * **Git:** Version control system.
 * **GitHub:** Platform for hosting the project code.
-
-
-
 ## Output Example
-...
+![Raw EEG Data Visualization](raw_eeg_data.png)
